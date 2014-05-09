@@ -25,7 +25,11 @@ include backuppc-client
 include deployment-user
 include nrpe
 include java
-include talk-production
+
+class { 'talk-production':
+  talkserver_fqdn => $::talkserver_fqdn,
+  filecache_fqdn  => $::filecache_fqdn,
+}
 
 file_line { 'urandom fix':
   path  => '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/security/java.security',
