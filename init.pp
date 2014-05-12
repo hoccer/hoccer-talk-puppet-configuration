@@ -37,7 +37,3 @@ file_line { 'urandom fix':
   match => '^securerandom.source=.*',
   require => Package['java'],
 }
-
-package { "pwgen":
-    ensure => "installed"
-}
