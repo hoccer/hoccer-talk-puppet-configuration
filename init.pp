@@ -20,15 +20,25 @@ define line($file, $line, $ensure = 'present') {
     }
 }
 
-
 include backuppc-client
 include deployment-user
 include nrpe
 include java
 
+notice("Talkserver fqdn set to: ${$::system_role}")
+notice("Talkserver cert set to: ${$::talkserver_cert}")
+notice("Talkserver key set to : ${$::talkserver_key}")
+notice("Filecache fqdn set to : ${$::filecache_fqdn}")
+notice("Filecache cert set to : ${$::filecache_cert}")
+notice("Filecache key set to  : ${$::filecache_key}")
+
 class { 'talk-production':
   talkserver_fqdn => $::talkserver_fqdn,
+  talkserver_cert => $::talkserver_cert, 
+  talkserver_key => $::talkserver_key,
   filecache_fqdn  => $::filecache_fqdn,
+  filecache_cert  => $::filecache_cert,
+  filecache_key  => $::filecache_key,
 }
 
 file_line { 'urandom fix':
