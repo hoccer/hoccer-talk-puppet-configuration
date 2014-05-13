@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Configure these variables according to your setup
 # Puppet will read these facter variables
 # Make sure to run this script with sudo if you run puppet with sudo as well
