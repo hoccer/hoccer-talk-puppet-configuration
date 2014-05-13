@@ -25,7 +25,7 @@ include deployment-user
 include nrpe
 include java
 
-notice("Talkserver fqdn set to: ${$::system_role}")
+notice("Talkserver fqdn set to: ${$::talkserver_fqdn}")
 notice("Talkserver cert set to: ${$::talkserver_cert}")
 notice("Talkserver key set to : ${$::talkserver_key}")
 notice("Filecache fqdn set to : ${$::filecache_fqdn}")
