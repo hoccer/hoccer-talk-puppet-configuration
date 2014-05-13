@@ -30,7 +30,7 @@ cd hoccer-talk-puppet-configuration
 # install puppet modules
 librarian-puppet install --verbose
 
-# edit configuration.sh and then execute it with
+# edit configuration.sh and then execute it
 ./configure.sh
 
 # apply puppet configuration
@@ -54,7 +54,7 @@ cd /vagrant
 # install puppet modules
 librarian-puppet install --verbose
 
-# edit configuration.sh and then execute it with
+# edit configuration.sh and then execute it
 ./configure.sh
 
 # apply puppet configuration
