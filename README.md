@@ -4,6 +4,7 @@ hoccer-talk-puppet-configuration
 ## Requirements
 
 * Ubuntu 14.04 LTS minimal install
+* Valid talkserver and filecache certificates and private keys (see Facter configuration below)
 
 ## Production Setup
 
@@ -29,13 +30,11 @@ cd hoccer-talk-puppet-configuration
 # install puppet modules
 librarian-puppet install --verbose
 
-# export facter environment variables needed by puppet
-export FACTER_talkserver_fqdn=<Talkserver URL>
-export FACTER_filecache_fqdn=<Filecache URL>
+# edit configuration.sh and then execute it with
+sudo ./configure.sh
 
 # apply puppet configuration
-sudo puppet apply init.pp --no-report --modulepath modules --verbose
-
+puppet apply init.pp --no-report --modulepath modules --verbose
 ```
 
 ## Development Setup
@@ -55,10 +54,10 @@ cd /vagrant
 # install puppet modules
 librarian-puppet install --verbose
 
-# export facter environment variables needed by puppet
-export FACTER_talkserver_fqdn=<Talkserver URL>
-export FACTER_filecache_fqdn=<Filecache URL>
+# edit configuration.sh and then execute it with
+sudo ./configure.sh
 
 # apply puppet configuration
-sudo puppet apply init.pp --no-report --modulepath modules --verbose
+puppet apply init.pp --no-report --modulepath modules --verbose
+exit
 ```
