@@ -31,7 +31,7 @@ cd hoccer-talk-puppet-configuration
 librarian-puppet install --verbose
 
 # edit configuration.sh and then execute it
-./configure.sh
+source configure.sh
 
 # apply puppet configuration
 sudo -E puppet apply init.pp --no-report --modulepath modules --verbose
@@ -55,7 +55,7 @@ cd /vagrant
 librarian-puppet install --verbose
 
 # edit configuration.sh and then execute it
-./configure.sh
+source configure.sh
 
 # apply puppet configuration
 sudo -E puppet apply init.pp --no-report --modulepath modules --verbose
