@@ -23,6 +23,9 @@ sudo apt-get install ruby-dev
 # remove old librarian-puppet via apt-get
 sudo apt-get remove librarian-puppet
 
+# install make if not present
+sudo apt-get install make
+
 # install librarian-puppet gem instead (you might need to reopen your terminal afterwards)
 sudo gem install librarian-puppet
 
