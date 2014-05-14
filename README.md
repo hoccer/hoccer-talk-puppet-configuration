@@ -6,9 +6,7 @@ hoccer-talk-puppet-configuration
 * Ubuntu 14.04 LTS minimal install
 * Valid talkserver and filecache certificates and private keys (see Facter configuration below)
 
-## Production Setup
-
-The following steps install all packages, dependencies and modules required (including this repository) and apply the puppet configuration. Make sure that an appropriate SSL certificate is present to clone the required repositories.
+## General Setup
 
 ```bash
 # install git 
@@ -28,7 +26,13 @@ sudo apt-get install make
 
 # install librarian-puppet gem instead (you might need to reopen your terminal afterwards)
 sudo gem install librarian-puppet
+```
 
+## Production Setup
+
+The following steps install all packages, dependencies and modules required (including this repository) and apply the puppet configuration. Make sure that an appropriate SSL certificate is present to clone the required repositories.
+
+```bash
 # checkout puppet provisioning repository and apply
 git clone git@github.com:hoccer/hoccer-talk-puppet-configuration.git
 cd hoccer-talk-puppet-configuration
@@ -45,7 +49,7 @@ sudo -E puppet apply init.pp --no-report --modulepath modules --verbose
 
 ## Development Setup
 
-The provisioning can be tested (after installing the dependencies described above) on a local VM using Vagrant as follows:
+The provisioning can be tested on a local VM using Vagrant as follows:
 
 ```bash
 # create VM
