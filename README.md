@@ -20,7 +20,10 @@ sudo apt-get -y install puppet
 # install ruby-dev
 sudo apt-get install ruby-dev
 
-# install librarian-puppet
+# remove old librarian-puppet via apt-get
+sudo apt-get remove librarian-puppet
+
+# install librarian-puppet gem instead (you might need to reopen your terminal afterwards)
 sudo gem install librarian-puppet
 
 # checkout puppet provisioning repository and apply
