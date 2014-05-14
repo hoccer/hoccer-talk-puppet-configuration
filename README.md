@@ -42,7 +42,7 @@ sudo -E puppet apply init.pp --no-report --modulepath modules --verbose
 
 ## Development Setup
 
-The provisioning can be tested on a local VM using Vagrant as follows:
+The provisioning can be tested (after installing the dependencies described above) on a local VM using Vagrant as follows:
 
 ```bash
 # create VM
