@@ -18,9 +18,6 @@ sudo apt-get -y install puppet
 # install ruby-dev
 sudo apt-get install ruby-dev
 
-# remove old librarian-puppet via apt-get
-sudo apt-get remove librarian-puppet
-
 # install make if not present
 sudo apt-get install make
 
