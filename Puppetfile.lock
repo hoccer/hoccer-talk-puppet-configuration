@@ -53,7 +53,7 @@ GIT
 GIT
   remote: git@github.com:hoccer/puppet-talk-production.git
   ref: feature/remove_legacy_servers
-  sha: dd15b39a9a7367906570dcdde1403afe82a9bcff
+  sha: 91e0d7f8bcada9ec33a740e7cf49cea077802cf7
   specs:
     hoccer/talk-production (0.0.1)
       artcom/riemann (>= 0)
