@@ -26,17 +26,21 @@ include nrpe
 include java
 
 notice("Talkserver fqdn set to: ${$::talkserver_fqdn}")
+notice("Talkserver port set to: ${$::talkserver_port}")
 notice("Talkserver cert set to: ${$::talkserver_cert}")
 notice("Talkserver key set to : ${$::talkserver_key}")
 notice("Filecache fqdn set to : ${$::filecache_fqdn}")
+notice("Filecache port set to : ${$::filecache_port}")
 notice("Filecache cert set to : ${$::filecache_cert}")
 notice("Filecache key set to  : ${$::filecache_key}")
 
 class { 'talk-production':
   talkserver_fqdn => $::talkserver_fqdn,
+  talkserver_port => $::talkserver_port,
   talkserver_cert => $::talkserver_cert, 
   talkserver_key => $::talkserver_key,
   filecache_fqdn  => $::filecache_fqdn,
+  filecache_port  => $::filecache_port,
   filecache_cert  => $::filecache_cert,
   filecache_key  => $::filecache_key,
 }
