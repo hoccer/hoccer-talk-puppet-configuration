@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.cpus = 2
   end
 
-  config.vm.box = "berendt/ubuntu-14.04-amd64"
+  config.vm.box = "ubuntu/trusty64"
 
   # ssh agent support
   config.ssh.private_key_path = [ '~/.vagrant.d/insecure_private_key', '~/.ssh/id_rsa' ]
