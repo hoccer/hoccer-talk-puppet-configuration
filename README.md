@@ -1,15 +1,21 @@
 hoccer-talk-puppet-configuration
 ===========================
 
+Provides a puppet manifest with basic modules for the hoccer talk server.
+
+Following the steps below all packages, dependencies and modules required (including this repository) are downloaded and applied using _puppet apply_. Make sure that an appropriate SSL certificate is present to clone the required repositories.
+
+Checkout the [wiki](https://github.com/hoccer/hoccer-talk-puppet-configuration/wiki) for documentation on system and application configuration.
+
 ## Requirements
 
 * Ubuntu 14.04 LTS minimal install
 * Valid talkserver and filecache certificates and private keys (see Facter configuration below)
 
-## General Setup
+## Production Setup
 
 ```bash
-# install git 
+# install git
 sudo apt-get -y install git-core
 
 # install puppet
@@ -23,13 +29,7 @@ sudo apt-get install make
 
 # install librarian-puppet gem instead (you might need to reopen your terminal afterwards)
 sudo gem install librarian-puppet
-```
 
-## Production Setup
-
-The following steps install all packages, dependencies and modules required (including this repository) and apply the puppet configuration. Make sure that an appropriate SSL certificate is present to clone the required repositories.
-
-```bash
 # checkout puppet provisioning repository and apply
 git clone git@github.com:hoccer/hoccer-talk-puppet-configuration.git
 cd hoccer-talk-puppet-configuration
