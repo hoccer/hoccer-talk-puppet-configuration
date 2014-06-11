@@ -3,7 +3,7 @@ hoccer-talk-puppet-configuration
 
 Provides a puppet manifest with basic modules for the hoccer talk server.
 
-Following the steps below all packages, dependencies and modules required (including this repository) are downloaded and applied using _puppet apply_. Make sure that an appropriate SSL certificate is present to clone the required repositories.
+Following the steps below all packages, dependencies and modules required (including this repository) are downloaded and applied using _puppet apply_. Make sure that an appropriate SSL certificate is present to clone the required repositories from GitHub. This can be achieved by installing one manually or by using ssh [agent forwarding](https://help.github.com/articles/using-ssh-agent-forwarding). For the latter you might need to make your key available via `ssh-add -K` first.
 
 Checkout the [wiki](https://github.com/hoccer/hoccer-talk-puppet-configuration/wiki) for documentation on system and application configuration.
 
