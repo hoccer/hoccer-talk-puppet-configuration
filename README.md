@@ -15,19 +15,13 @@ Checkout the [wiki](https://github.com/hoccer/hoccer-talk-puppet-configuration/w
 ## Production Setup
 
 ```bash
-# install git
-sudo apt-get -y install git-core
+# ensure that all package information are up-to-date
+sudo apt-get update
 
-# install puppet
-sudo apt-get -y install puppet
+# install git, puppet, ruby-dev and make if not present
+sudo apt-get install git-core puppet ruby-dev make
 
-# install ruby-dev
-sudo apt-get install ruby-dev
-
-# install make if not present
-sudo apt-get install make
-
-# install librarian-puppet gem instead (you might need to reopen your terminal afterwards)
+# install librarian-puppet gem (you might need to reopen your terminal afterwards)
 sudo gem install librarian-puppet
 
 # checkout puppet provisioning repository and apply

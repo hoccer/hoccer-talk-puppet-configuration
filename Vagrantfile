@@ -20,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Enable shell provisioning
   config.vm.provision :shell do |shell|
     shell.inline = <<-SCRIPT
+      sudo apt-get update
       sudo apt-get -y install git-core puppet ruby-dev make
       sudo gem install librarian-puppet
     SCRIPT
