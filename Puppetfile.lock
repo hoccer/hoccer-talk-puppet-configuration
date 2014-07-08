@@ -1,33 +1,33 @@
 FORGE
-  remote: http://forge.puppetlabs.com
+  remote: https://forgeapi.puppetlabs.com
   specs:
-    maestrodev/rvm (1.5.6)
+    maestrodev/rvm (1.5.9)
       puppetlabs/stdlib (>= 3.2.0)
-    maestrodev/wget (1.4.1)
-    puppetlabs/apt (1.4.2)
+    maestrodev/wget (1.4.4)
+    puppetlabs/apt (1.5.0)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/concat (1.1.0)
       puppetlabs/stdlib (>= 4.0.0)
-    puppetlabs/firewall (1.1.1)
-    puppetlabs/gcc (0.1.0)
+    puppetlabs/firewall (1.1.2)
+    puppetlabs/gcc (0.2.0)
     puppetlabs/java (1.1.1)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/mongodb (0.7.0)
+    puppetlabs/mongodb (0.8.0)
       puppetlabs/apt (>= 1.0.0)
       puppetlabs/stdlib (>= 2.2.0)
     puppetlabs/nginx (99.99.99)
       puppetlabs/stdlib (>= 0.1.6)
-    puppetlabs/ntp (3.0.3)
-      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/ntp (3.1.1)
+      puppetlabs/stdlib (>= 4.0.0)
     puppetlabs/postgresql (3.3.3)
       puppetlabs/apt (< 2.0.0, >= 1.1.0)
       puppetlabs/concat (< 2.0.0, >= 1.0.0)
       puppetlabs/firewall (>= 0.0.4)
       puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs/stdlib (4.2.1)
+    puppetlabs/stdlib (4.2.2)
     saz/locales (2.1.0)
     saz/vim (2.1.0)
-    stahnma/epel (0.0.6)
+    stahnma/epel (0.1.0)
 
 GIT
   remote: git@github.com:hoccer/puppet-backuppc-client.git
@@ -39,21 +39,21 @@ GIT
 GIT
   remote: git@github.com:hoccer/puppet-deployment-user.git
   ref: master
-  sha: b154bef0ad874bafc1ff14339fa6e8ed5b900876
+  sha: 6278c95289ed7609e8edd0bba8309c13dace6a7b
   specs:
     hoccer/deployment-user (0.0.1)
 
 GIT
   remote: git@github.com:hoccer/puppet-nrpe.git
   ref: master
-  sha: 3470934d878ca3372efcaf85a74aa475caa65385
+  sha: daa1f9014bd258b7f9a1e98c82a416e949439010
   specs:
     hoccer/nrpe (0.0.1)
 
 GIT
   remote: git@github.com:hoccer/puppet-talk-production.git
-  ref: feature/remove_legacy_servers
-  sha: 0fdc7e567812460bd5bc92aaa27f4936bd532b5e
+  ref: develop
+  sha: 50cc66bcdd538ea25a841ee8b50d0976994dd255
   specs:
     hoccer/talk-production (0.0.1)
       artcom/riemann (>= 0)
