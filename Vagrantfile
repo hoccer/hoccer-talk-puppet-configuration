@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |v|
     v.name = "hoccer_talk"
-    v.memory = 2048
+    v.memory = 4096
     v.cpus = 2
   end
 
