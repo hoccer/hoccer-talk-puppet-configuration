@@ -25,20 +25,36 @@ include deployment-user
 include nrpe
 include java
 
-notice("Talkserver fqdn set to: ${$::talkserver_fqdn}")
-notice("Talkserver port set to: ${$::talkserver_port}")
-notice("Talkserver cert set to: ${$::talkserver_cert}")
-notice("Talkserver key set to : ${$::talkserver_key}")
+notice("Primary talkserver fqdn set to: ${$::primary_talkserver_fqdn}")
+notice("Primary talkserver port set to: ${$::primary_talkserver_port}")
+notice("Primary talkserver cert set to: ${$::primary_talkserver_cert}")
+notice("Primary talkserver key set to : ${$::primary_talkserver_key}")
+notice("Primary talkserver backend set to : ${$::primary_talkserver_backend}")
+
+notice("Secondary talkserver fqdn set to: ${$::secondary_talkserver_fqdn}")
+notice("Secondary talkserver port set to: ${$::secondary_talkserver_port}")
+notice("Secondary talkserver cert set to: ${$::secondary_talkserver_cert}")
+notice("Secondary talkserver key set to : ${$::secondary_talkserver_key}")
+notice("Secondary talkserver backend set to : ${$::secondary_talkserver_backend}")
+
 notice("Filecache fqdn set to : ${$::filecache_fqdn}")
 notice("Filecache port set to : ${$::filecache_port}")
 notice("Filecache cert set to : ${$::filecache_cert}")
 notice("Filecache key set to  : ${$::filecache_key}")
 
 class { 'talk-production':
-  talkserver_fqdn => $::talkserver_fqdn,
-  talkserver_port => $::talkserver_port,
-  talkserver_cert => $::talkserver_cert, 
-  talkserver_key => $::talkserver_key,
+  primary_talkserver_fqdn => $::primary_talkserver_fqdn,
+  primary_talkserver_port => $::primary_talkserver_port,
+  primary_talkserver_cert => $::primary_talkserver_cert,
+  primary_talkserver_key => $::primary_talkserver_key,
+  primary_talkserver_backend => $::primary_talkserver_backend,
+
+  secondary_talkserver_fqdn => $::secondary_talkserver_fqdn,
+  secondary_talkserver_port => $::secondary_talkserver_port,
+  secondary_talkserver_cert => $::secondary_talkserver_cert,
+  secondary_talkserver_key => $::secondary_talkserver_key,
+  secondary_talkserver_backend => $::secondary_talkserver_backend,
+
   filecache_fqdn  => $::filecache_fqdn,
   filecache_port  => $::filecache_port,
   filecache_cert  => $::filecache_cert,
