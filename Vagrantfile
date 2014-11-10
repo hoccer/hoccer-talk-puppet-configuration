@@ -7,11 +7,14 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |v|
     v.name = "hoccer_talk"
-    v.memory = 2048
+    v.memory = 4096
     v.cpus = 2
   end
 
-  config.vm.box = "berendt/ubuntu-14.04-amd64"
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network "forwarded_port", guest: 443, host: 8443
+  config.vm.network "forwarded_port", guest: 8444, host: 8444
+  config.vm.network "private_network", ip: "192.168.60.10"
 
   # ssh agent support
   config.ssh.private_key_path = [ '~/.vagrant.d/insecure_private_key', '~/.ssh/id_rsa' ]
@@ -20,7 +23,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Enable shell provisioning
   config.vm.provision :shell do |shell|
     shell.inline = <<-SCRIPT
-      sudo apt-get -y install git-core puppet librarian-puppet
+      sudo apt-get update
+      sudo apt-get -y install git-core puppet ruby-dev make
+      sudo gem install librarian-puppet --version 1.4.0
     SCRIPT
   end
 end
