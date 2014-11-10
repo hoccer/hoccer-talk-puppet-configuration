@@ -17,4 +17,4 @@ mod "hoccer/nrpe",
 
 mod "hoccer/talk-production",
   :git => "git@github.com:hoccer/puppet-talk-production.git",
-  :ref => "master"
+  :ref => "develop"
